@@ -6,7 +6,8 @@ import { FaHome } from "react-icons/fa";
 import { RiContactsFill } from "react-icons/ri";
 import { MdContactPhone } from "react-icons/md";
 import { TbListDetails } from "react-icons/tb";
-const Navbar = () => {
+import { Link } from "react-scroll";
+const Navbar = (props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   function openNav() {
@@ -24,7 +25,7 @@ const Navbar = () => {
           <img src={img} alt="" />
         </div>
         <div className="text">
-          <h1>Hello Subhankar</h1>
+          <h1>{props.name}</h1>
         </div>
         <div className="icon" onClick={openNav}>
           <GiHamburgerMenu />
@@ -33,19 +34,20 @@ const Navbar = () => {
           <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>
             &times;
           </a>
-          <a href="/">
-            <FaHome /> <h2>Home</h2>
-          </a>
-          <a href="/">
-            <TbListDetails /><h2>About</h2></a>
-          <a href="/">
-            <MdContactPhone />
-            <h2>Contact</h2>
-          </a>
-          <a href="/">
-            <RiContactsFill />
-            <h2>Login</h2>
-          </a>
+          <Link to="hero" smooth={true} duration={600} className="nav-link">
+          <FaHome /> Home
+          </Link>
+          <Link to="about" smooth={true} duration={500} className="nav-link">
+          <TbListDetails /> About
+          </Link>
+          <Link to="contact" smooth={true} duration={500} className="nav-link">
+          <MdContactPhone /> Contact Us
+          </Link>
+          <Link to="login" smooth={true} duration={500} className="nav-link">
+          <RiContactsFill /> Login
+          </Link>
+
+        
         </div>
       </div>
     </>

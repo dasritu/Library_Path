@@ -27,22 +27,27 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #7D1540; /* Background color of the sidebar */
+  background-color: rgba(96, 95, 95, 0.5); /* Transparent white background with 50% opacity */
+  backdrop-filter: blur(10px);  /* Background color of the sidebar */
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  
 }
 
 /* Style for the links in the side navigation menu */
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
-  color: white;
+  font-size: 18px;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  cursor: pointer;
+  margin-top: 43px;
+  font-weight: bold;
 }
 .sidenav a h2{
   margin: 15px;
@@ -71,4 +76,10 @@
 /* Style for the button to open the side navigation menu */
 #main {
   transition: margin-right 0.5s;
+}
+
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

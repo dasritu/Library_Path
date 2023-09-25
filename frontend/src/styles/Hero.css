@@ -3,6 +3,7 @@
   justify-content: space-evenly;
   height: 600px;
   margin: 0;
+  height: 100vh;
 }
 
 .left {
@@ -11,12 +12,14 @@
   color: white;
   margin: 20px;
   padding: 15px;
+  height: 75vh;
 }
 
 .right {
   background-color: #cbd2ff;
   width: 70%;
   margin: 20px 20px 20px 0;
+  height: 71vh;
 }
 .button {
   display: flex;

@@ -1,15 +1,22 @@
-import React from "react";
+import React,{useState} from "react";
 import "../styles/Hero.css";
+import Right from "./Right";
+
 
 const Hero = () => {
+  const [selectedItem, setSelectedItem] = useState("dashboard");
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
   return (
     <div className="hero">
       <div className="left">
         <div className="button">
-          <div className="bttn">
+          <div className="bttn" onClick={() => handleItemClick("dashboard")}>
             <h2>DASHBOARD</h2>
           </div>
-          <div className="bttn">
+          <div className="bttn" onClick={() => handleItemClick("books")}>
             <h2>BOOKS</h2>
           </div>
           <div className="bttn">
@@ -26,9 +33,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="right">
-        
-      </div>
+      {/* <div className="right">
+       
+      </div> */}
+      <Right selectedItem={selectedItem}/>
     </div>
   );
 };
